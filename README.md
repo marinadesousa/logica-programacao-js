@@ -63,3 +63,29 @@ Operadores de atribuição:
 `++ numero` (pré-incremento).
 * `--` -> atribuição com **decremento 1** (pode ser *pré* ou *pós* decremento). Ex: `numero --` (pós-decremento) ou
 `-- numero` (pré-decremento).
+
+## operadores-comparacao.js
+
+Neste arquivo conhecemos os operadores de comparação e a estrutura lógica de decisão **if-else**.
+
+Esta estrutura exibe no console se a condição ytestada é `true` (verdadeira) 
+ou `false` (falsa). A condição armazena o resultado da **comparação entre duas variáveis**, como segue:
+
+~~~js
+const a = 'a', b = 'A';
+const condicao = a == b ;
+ ~~~
+
+ ## Operadores de comparação:
+
+* `==` -> é igual
+* `!=` -> não é igual
+* `>` -> maior que
+* `<` -> menor que 
+* `>=` -> maior OU igual
+* `<=` -> menor OU igual
+* `===` -> é estritamente igual ( valor E tipo)
+* `!==` -> não é estritamente igual (valor OU tipo)
+
+
+j
