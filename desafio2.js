@@ -1,18 +1,25 @@
-const altura = window.prompt('Medindo a altura');
-const peso = window.prompt('Medindo o peso');
+// declaração sem atribuição (só com let)
+let altura, peso;
 
-const imc = peso / (altura**2) 
+const imc = peso / (altura**2)
 
-if (imc <= 18.5) {
-    window.alert('Abaixo do peso');
-} else if (imc <= 24.9) {
-    window.alert('Peso normal');
-} else if (imc <= 29.9) {
-    window.alert('Sobrepeso');
-} else if (imc <= 34.9) {
-    window.alert('Obesidade grau I');
-} else if (imc <= 39.9) {
-    window.alert('Obesidade grau II');
+    // teste de mesa
+    imc = 19.1 ;
+ 
+  if (imc <= 18.5) {
+    window.alert(`IMC: ${imc.toFixed(1)} --> Abaixo do peso`);
+        
+} else if (imc < 25) {
+    window.alert(`IMC: ${imc.toFixed(1)} --> Peso normal`);
+
+} else if (imc < 30) {
+    window.alert(`IMC: ${imc.toFixed(1)} --> Sobrepeso`);
+
+} else if (imc < 35) {
+    window.alert(`IMC: ${imc.toFixed(1)} --> Obesidade grau I`);
+
+} else if (imc < 40 )  {
+    window.alert(`IMC: ${imc.toFixed(1)} --> Obesidade grau II`);
 } else {
-    window.alert('Obesidade grau III');
+    window.alert(`IMC: ${imc} -- Obesidade grau III`);
 }

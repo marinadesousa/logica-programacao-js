@@ -1,10 +1,10 @@
-const nota1 = 6.4, nota2 = 6.4, nota3 = 6.4;
-const condicao = (nota1 + nota2 + nota3) /3;
+const nota1 = 10, nota2 = 6, nota3 = 7 ;
+const media = (nota1 + nota2 + nota3) / 3
 
-if (condicao >= 7) {
-    console.log ('Aprovado');
-} else if (condicao <= 5) {
-    console.log ('Reprovado'); 
+if (media >= 7) {
+    console.log (`O aluno foi APROVADO com média ${media.toFixed(2)}`);
+} else if ( media >= 5) {
+    console.log (`O aluno foi está de EXAME com média ${media.toFixed(2)}`);
 } else {
-    console.log ('Exame'); 
+    console.log (`O aluno foi REPROVADO com média ${media.toFixed(2)}`); 
 }
