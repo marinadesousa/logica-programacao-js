@@ -1,7 +1,10 @@
 function converteTemperatura() {
-    const temperatura = parseFloat(window.prompt ('Digite a temperatura atual'));}
+    const temperatura = parseFloat(window.prompt ('Digite a temperatura atual'));
 // processamento
+
+
 if( !isNaN(temperatura)){
+    
     const escalaAtual = window.prompt ('Faça a escolha da escala atual').toUpperCase();
     const conversao = window.prompt ('Digite a temperatura que será ser convertida').toUpperCase();
 
@@ -30,5 +33,9 @@ if( !isNaN(temperatura)){
     window.alert(`Kelvin para Fahrenheit: ${calculo} °F`);
 
     }else  window.alert ('O número digitado para a conversão não é número válido');
+}
+    
+    return mensagem;
+
 }
 
