@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
@@ -49,13 +49,30 @@
             <option value="K">Kelvin</option>
         </select>
 
-        <button type="button">Converter</button>
-        <button type="button">Limpar</button>
+        <button type="button" id="Convertor">Converter</button>
+        <button type="reset" id="Limpar">Limpar</button>
 
     </form>
+    <div id="resultadoTemperatura"></div>
 
     <script src="desafio2.js"></script>
     <script src="desafio3.js"></script>
+    
+    <script>
+
+        document.querySelector('#Convertor').addEventListener('click', function(){
+            const valorTemperatura = document.querySelector('#valorTemperatura').value;
+            const escalaAtual = document.querySelector('#escalaAtual').value;
+            const Conversao = document.querySelector('#Conversao').value;
+            const resultado = converteTemperatura(valorTemperatura, escalaAtual, Conversao);
+            console.log(resultado);
+            document.querySelector('#resultadoTemperatura').innerHTML = resultado;
+        });
+        document.querySelector ('#Limpar').addEventListener('click', function(){
+            document.querySelector('#resultadoTemperatura').innerHTML ='';
+        });
+
+    </script>
 
     <script>
 
@@ -71,9 +88,6 @@
         ('click', function(){
             document.querySelector('#resultadoIMC').innerHTML ='';
         });
-
-
-
     </script>
 </body>
 </html>

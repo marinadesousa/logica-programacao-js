@@ -1,41 +1,35 @@
-function converteTemperatura() {
-    const temperatura = parseFloat(window.prompt ('Digite a temperatura atual'));
-// processamento
-
-
-if( !isNaN(temperatura)){
+function converteTemperatura(valorTemperatura, escalaAtual, Conversao) {
     
-    const escalaAtual = window.prompt ('Faça a escolha da escala atual').toUpperCase();
-    const conversao = window.prompt ('Digite a temperatura que será ser convertida').toUpperCase();
+    let temperaturaConvertida;
+    if( !isNaN(valorTemperatura)) {
+        escalaAtual = escalaAtual.toUpperCase();
+        Conversao = Conversao.toUpperCase();
 
-    if ((escalaAtual == "C" && conversao == "F")) {
-        calculo = (temperatura * 9/5) + 32;
-        window.alert(`Celsius para Fahrenheit: ${calculo} °F`);
+    if ((escalaAtual == "C" && Conversao == "F")) {
+       calculo = ( valorTemperatura  * 9/5) + 32;
+       temperaturaConvertida = `Celsius para Fahrenheit: ${calculo} °F`;
 
-    }else if ((escalaAtual == 'C' && conversao == 'K')) { 
-    calculo = (temperatura - 273.15);
-    window.alert(`Celsius para Kelvin: ${calculo} °K`);
+    }else if ((escalaAtual == 'C' && Conversao == 'K')) { 
+        calculo = ( valorTemperatura - 273.15);
+        temperaturaConvertida = `Celsius para Kelvin: ${calculo} °K`;
 
-    }else if ((escalaAtual == 'F' && conversao == 'C')) {
-    calculo = (temperatura - 32) * 5/9;
-    window.alert(`Fahrenheit para Celsius: ${calculo} °C`);
+    }else if ((escalaAtual == 'F' && Conversao == 'C')) {
+        calculo = ( valorTemperatura - 32) * 5/9;
+        temperaturaConvertida = `Fahrenheit para Celsius: ${calculo} °C`;
 
-    }else if ((escalaAtual == 'F' && conversao == 'K')) {
-    calculo = ((temperatura * 1) + 459.67) * 5/9;
-    window.alert(`Fahrenheit para Kelvin: ${calculo} °K`);
+    }else if ((escalaAtual == 'F' && Conversao == 'K')) {
+        calculo = ((valorTemperatura * 1) + 459.67) * 5/9;
+        temperaturaConvertida = `Fahrenheit para Kelvin: ${calculo} °K`;
 
-    }else if ((escalaAtual == 'K' && conversao == 'C')) {
-    calculo = (temperatura * 1) - 273.15;
-    window.alert(`Kelvin para Celsius: ${calculo} °C`);
+    }else if ((escalaAtual == 'K' && Conversao == 'C')) {
+        calculo = ( valorTemperatura * 1) - 273.15;
+        temperaturaConvertida = `Kelvin para Celsius: ${calculo} °C`;
 
-    }else if ((escalaAtual == 'K' && conversao == 'F')) {
-    calculo = (temperatura * 1) * 9/5 - 459.67;
-    window.alert(`Kelvin para Fahrenheit: ${calculo} °F`);
-
-    }else  window.alert ('O número digitado para a conversão não é número válido');
-}
+    }else if ((escalaAtual == 'K' && Conversao == 'F')) {
+        calculo = ( valorTemperatura * 1) * 9/5 - 459.67;
+        temperaturaConvertida = `Kelvin para Fahrenheit: ${calculo} °F`;
+    }
     
-    return mensagem;
-
 }
-
+return temperaturaConvertida;
+}
