@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercícios Complementares</title>
+    <title>Classificação de um triângulo</title>
 </head>
 <body>
-
-    <h2>Triângulos</h2>
+    <link rel="stylesheet" href="style.css">
+    <h1>Classificação de um triângulo</h1>
 
     <form action="">
         
         <label for="LadoA">Lado A:</label>
-        <input type="number" id="valorA">
+        <input type="number" id="valorA" min="0">
+         <!-- O input precisa do ID para ser encontrado pelo javascript no DOM -->
         
         <label for="LadoB">Lado B:</label>
-        <input type="number" id="valorB">
+        <input type="number" id="valorB" min="0">
         
         <label for="LadoC">Lado C:</label>
-        <input type="number" id="valorC">
-        <div>
+        <input type="number" id="valorC"  min="0">
 
+        <div>
         <button type="button" id="btVerificação">Verificar</button>
         <button type="reset" id="Limpar">Limpar</button>
-        </div>
         <p id="resultado"></p>
+        </div>
 
-    </div>
     </form>
+
     <div id="verificarTriangulo" ></div>
     <script src="exercicio1.js"></script>
 

@@ -1,0 +1,42 @@
+/* Resetando alguns estilos padrão do navegador */
+* {
+    margin: 0 ;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root { /* <html> */
+    --fonte-geral: 'Anta', sans-serif;
+    scroll-behavior: smooth; 
+}
+
+body {
+    text-align: center;
+    background-color: #b6b1b1;
+}
+
+
+.elementos-em-linha {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+}
+
+#btVerificação{
+    margin-right: 10px;
+    padding-inline: 6% 6%;
+    background-color:#5af05a;
+    border-color: #76f8cd;
+}
+
+#Limpar {
+    padding-inline: 6% 6%;
+    background-color: #ed3939;
+    border-color: #fe6a6a;
+}
+
+
+
