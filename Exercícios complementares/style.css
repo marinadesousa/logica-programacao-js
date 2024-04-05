@@ -1,46 +1,40 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-    --fonte-geral: font-family: "Roboto Condensed", sans-serif;
-}
+:root {} 
 
 body {
-    font-family: var(--fonte-geral);
+    font-family: "Roboto Condensed", sans-serif;      
     display: flex;
     justify-content: center;
-    background:#e89f9f;
-    padding-top: 8rem;
+    background: #CDCDB4;
+    padding: 8%;
+}
+
+h1{
+    text-align: center;
 }
 
 
 .elementos-em-linha{ 
     display: flex;
     justify-content: center;
-    align-items: center;
-   width: 250px;
-   height: 250px;
-   background-color: aliceblue;
+   
+   
 }
 
 #btVerificação{
     margin-right: 10px;
-    padding-inline: 6% 6%;
+    padding-inline: 4% 4%;
     background-color:#5af05a;
     border-color: #76f8cd;
+    border-radius: 5px;   
 }
 
 #Limpar {
-    padding-inline: 6% 6%;
+   padding-inline: 4% 4%;
     background-color: #ed3939;
     border-color: #fe6a6a;
+    border-radius: 5px;
 }
 
 div{
@@ -48,6 +42,27 @@ div{
     justify-content: center; 
 }
 
+section{
+    width: 350px;
+    background-color: #8B8B7A;
+    padding: 8%;
+    border-radius: 6px;
+}
+
+input{
+    width: 100px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none
+}
+
+#botoes{
+    display: flex;
+    justify-content: center;
+}
 
 
 
