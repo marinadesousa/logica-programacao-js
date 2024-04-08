@@ -10,16 +10,30 @@
     <h2>Digite o Desconto:</h2>
 
     <form action="" id="tipodesconto">
-        <label for="Descon">cliente </label>
-        <input type="numer" id="freguês">
+        <label for="Desconto">cliente</label>
+        <input type="number" id="valor">
 
-        <label for="porcentagem"> Porcentagem de diminuição de valor</label>
-        <select name="" id=""></select>
+        <label for="porcentagem"> Porcentagem de:</label>
 
+        <select name="" id="Clientes">
+         <option value="Comum">Cliente Comum</option>
+         <option value="Funcionario">Funcionário</option>
+         <option value="VIP">Cliente VIP</option>
+        </select>
+        
         <button type="button" id="btDesconto">Calcular</button>
         <button type="reset"id="limparDesconto">Limpar</button>
-
     </form>
+
+    <script>
+        document.querySelector('#btDesconto').addEventListener('click', function () {
+            const cliente = document.querySelector('#clientes').value;
+            const valor = parseFloat(document.querySelector('#valor').value);
+            const desconto = valorFinal(Clientes, valor);
+            document.querySelector('#valorDesconto').innerHTML = desconto;
+        });
+
+    </script>
 
     <div id="valorDesconto"></div>
     <script src="exercicio2.js"></script>
