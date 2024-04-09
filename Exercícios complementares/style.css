@@ -6,7 +6,7 @@ body {
     font-family: "Roboto Condensed", sans-serif;      
     display: flex;
     justify-content: center;
-    background: #CDCDB4;
+    background:;
     padding: 8%;
 }
 
@@ -44,7 +44,7 @@ div{
 
 section{
     width: 350px;
-    background-color: #8B8B7A;
+    background-color:;
     padding: 8%;
     border-radius: 6px;
 }
