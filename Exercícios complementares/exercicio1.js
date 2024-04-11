@@ -1,18 +1,35 @@
 let resultado;
 
-function verificarTriangulo (ladoA, LadoB, LadoC) {
-    if (ladoA === LadoB && LadoB === LadoC) {
-        return "Equilátero";
+function verificarTriangulo (ladoA, ladoB, ladoC) {
 
-    } else if (ladoA === LadoB || ladoA === LadoC || LadoB === LadoC) {
-        return "Isósceles";
+    let mensagemErro, tipoTriangulo;
 
-    } else if (ladoA != LadoB && ladoA != LadoC && LadoB && LadoC) {
-        return "Escaleno";
+    // teste do triângulo
+    if (ladoA < (ladoB + ladoC) && ladoB < (ladoA + ladoC) && ladoC < (ladoA + ladoB)) {
+
+        // classificação
+
+        if (ladoA === ladoB && ladoB === ladoC) {
+
+            tipoTriangulo = 'Equilátero';
+
+        } else if (ladoA === ladoB || ladoB === ladoC || ladoA === ladoC) {
+
+            tipoTriangulo = 'Isósceles';
+
+        } else {
+
+            tipoTriangulo = 'Escaleno';
+
+        }  // fim classificação
 
     } else {
-       erro = "Essas medidas não são validas";
 
+        mensagemErro = 'A forma não é um triângulo';
     }
-    
+    // fim do teste do triângulo
+
+    return tipoTriangulo ?? mensagemErro;
+    // ?? -> operador de coalescência
+
 }

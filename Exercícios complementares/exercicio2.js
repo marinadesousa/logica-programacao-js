@@ -1,25 +1,14 @@
 function  calculadesconto (valorTotal, Cliente ){
-    let desconto = 0;
-    let niveldeDesconto = ""
     
+    if (Cliente === 'Comum') {
+        return valorTotal;
 
-    if (Cliente === 1) {
-        desconto = 0;
-        niveldeDesconto = "Cliente comum";
+    } else if (Cliente === 'Funcionario') {
+        return valorTotal - (valorTotal * 0.1);
 
-    } else if (Cliente === 2) {
-        desconto = valorTotal * 10/100; //10%
-        niveldeDesconto = "Funcionário";
+    } else {
+        return valorTotal - (valorTotal * 0.05);
 
-    } else if (Cliente === 3) {
-        desconto = valorTotal * 5/100; //5%
-        niveldeDesconto = "Cliente Vip"
-
-    }else {
-        console.log ("Código do cliente é inválido.");
-
-        return;
     }
-    let valorFinal = valorTotal - desconto;
   
 }

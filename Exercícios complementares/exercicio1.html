@@ -4,58 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificação de um triângulo</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <a href="index.html">↩ Home</a>
+    <h1 class="titulo-pagina">Classificação de um triângulo</h1>
 
-    <section>
-        
-        <h1>Classificação de um triângulo</h1>
-
-    <form action="">
-
-        <div class="elementos-em-linha">
-            
-        <label for="LadoA">Lado A:</label>
-        <input type="number" id="valorA" min="0">
-         <!-- O input precisa do ID para ser encontrado pelo javascript no DOM -->
-        
-        <label for="LadoB">Lado B:</label>
-        <input type="number" id="valorB" min="0">
-        
-        <label for="LadoC">Lado C:</label>
-        <input type="number" id="valorC"  min="0">
-    </div>
-    </form>
-
-        
-        <div id="verificarTriangulo" ></div>
-        <div id="botoes">
-        <button type="button" id="btVerificação">Verificar</button>
-        <button type="reset" id="Limpar">Limpar</button>
-        
-        </div>
-    </section>
+    <main>
     
-   
+        <form action=".">
+    
+            <div class="elementos-em-linha">
+    
+                <div class="controle-form">
+                    <label for="ladoA">Lado A:</label>
+                    <input type="number" id="ladoA" min="0">
+                </div>
+                <!-- O input precisa do ID para ser encontrado pelo javascript no DOM -->
+        
+                <div class="controle-form">
+                    <label for="ladoB">Lado B:</label>
+                    <input type="number" id="ladoB" min="0">
+                </div>
+        
+                <div class="controle-form">
+                    <label for="ladoC">Lado C:</label>
+                    <input type="number" id="ladoC" min="0">
+                </div>
 
-    <script src="exercicio1.js"></script>
+            </div>
+    
+            <div class="botoes">
+                <button type="button" id="btClassificar" 
+                class="acao-positiva">Classificar</button>
+                <button type="reset" id="btLimpar" 
+                class="acao-negativa">Limpar</button>
+            </div>
+            
+        </form>
+    
+        <div id="resultado"></div>
+
+    </main>
 
     <script>
+        
+        document.querySelector('#btClassificar').addEventListener('click', () => { // arrow function
 
-        document.querySelector('#btVerificação').addEventListener('click', function(){
-            const LadoA = document.querySelector('#valorA').value;
-            const LadoB = document.querySelector('#valorB').value;
-            const LadoC = document.querySelector('#valorC').value;
-            const verificar = verificarTriangulo(LadoA, LadoB, LadoC);
-            console.log(verificar)
-            document.querySelector('#verificarTriangulo').innerHTML = verificar;
-           });
-           document.querySelector('#Limpar').addEventListener('click', function(){
-                    document.querySelector('#verificarTriangulo').innerHTML = '';
-                });
+            // atribuindo e fazendo o casting
+            const ladoA = Number(document.querySelector('#ladoA').value);
+            const ladoB = Number(document.querySelector('#ladoB').value);
+            const ladoC = Number(document.querySelector('#ladoC').value);
+
+            const classificacao = classificaTriangulo(ladoA, ladoB, ladoC);
+
+            document.querySelector('#resultado').innerHTML = classificacao;
+
+        });
+
+        document.querySelector('#btLimpar').addEventListener('click', () => {
+            document.querySelector('#resultado').innerHTML = '';
+        });
 
     </script>
 

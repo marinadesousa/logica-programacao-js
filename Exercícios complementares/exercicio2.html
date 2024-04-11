@@ -8,16 +8,17 @@
 </head>
 
 <body>
-    <h1>Desconto Clientes</h1>
+    <a href="index.html">↩ Home</a>
+    <h1 class="titulo-pagina">Desconto Clientes</h1>
     <h2>Digite o Desconto:</h2>
 
     <form action="" id="tipodesconto">
-        <label for="Desconto">cliente</label>
+        <label for="valor">cliente</label>
         <input type="number" id="valor">
 
         <label for="porcentagem"> Porcentagem de:</label>
 
-        <select name="" id="Clientes">
+        <select name="" id="porcentagem">
             <option value="Comum">Cliente Comum</option>
             <option value="Funcionario">Funcionário</option>
             <option value="VIP">Cliente VIP</option>
@@ -27,18 +28,25 @@
         <button type="reset" id="limparDesconto">Limpar</button>
     </form>
 
+    <div id="valorDesconto"></div>
+
+    <script src="exercicio2.js"></script>
+
     <script>
         document.querySelector('#btDesconto').addEventListener('click', function () {
-            const cliente = document.querySelector('#clientes').value;
-            const valor = parseFloat(document.querySelector('#valor').value);
-            const desconto = valorFinal(Clientes, valor);
+            const cliente = parseFloat(document.querySelector('#valor').value);
+            const valor = document.querySelector('#porcentagem').value;
+            const desconto = calculadesconto(cliente, valor);
             document.querySelector('#valorDesconto').innerHTML = desconto;
         });
 
+        document.querySelector('#limparDesconto').addEventListener('click', function() {
+            document.querySelector('#valorDesconto').innerHTML = '';
+
+        })
+
     </script>
 
-    <div id="valorDesconto"></div>
-    <script src="exercicio2.js"></script>
 
 </body>
 
