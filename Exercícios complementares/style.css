@@ -91,14 +91,14 @@ button:active {
 }
 
 .acao-negativa {
-    background-color: #e85391;
+    background-color: #17f7e4;
     color: #ffffff;
 }
 
 .acao-negativa:hover {
-    background-color: #e85391;
+    background-color: #17f7e4;
 }
 
 .acao-negativa:active {
-    background-color: #e82375;
+    background-color:  #17f7e4;
 }

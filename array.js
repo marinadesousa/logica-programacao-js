@@ -6,4 +6,5 @@ for (let i = 0; i < variavel.length; i++) {
 console.log(variavel[i]);
 
 }
-// indice = posição -1
+// indice = posição -1 
+//

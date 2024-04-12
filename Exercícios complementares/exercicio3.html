@@ -1,30 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Placar de um jogo de futebol</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .oculto {
+            display: none;
+        }
+
+        .acao-alternativa {
+            background-color: #12eeee;
+        }
+
+        .acao-alternativa:active {
+            background-color: #12eeee;
+
+        }
+
+        .acao-alternativa:active {
+            background-color: #12eeee;
+        }
+    </style>
 </head>
 <body>
     <section>
-        <a href="index.html">↩ Home</a>
+        <a href="../index.html">↩ Home</a>
         <h1 class="titulo-pagina">Placar de um jogo de futebol</h1>
 
         <form action="" id="placarJogo">
-            <div class="elementos-em-linha">
-                <label for="timeA">Corinthians</label>
-                <input type="number" id="timeA" min="0">
 
+         <div class="elementos-em-linha"></div>
+
+            <div class="controle-form">
+                <label for="timeA">Corinthians</label>
+                <input type="number" id="timeA" min="0" required autofocus>
+
+            <div class="controle-form">
                 <label for="timeB">Internacional</label>
-                <input type="number" id="timeB" min="0">
+                <input type="number" id="timeB" min="0" required autofocus>
             </div>
             
             <div id="resultadoJogo"></div>
 
             <div id="botoes">
-                <button type="button" id="btfutebol">Calcular</button>
-                <button type="reset" id="btlimpa">Limpar</button>
+                <button type="button" id="btfutebol" 
+                class="acao-positiva">Calcular</button>
+                <button type="reset" id="btlimpa" 
+                class="acao-negativa">Limpar</button>
             </div>
+
         </form>
 
     </section>

@@ -5,18 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descontos</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .oculto {
+            display: none;
+        }
+
+        .acao-alternativa {
+            background-color: #12eeee;
+        }
+
+        .acao-alternativa:active {
+            background-color: #12eeee;
+
+        }
+
+        .acao-alternativa:active {
+            background-color: #12eeee;
+        }
+    </style>
 </head>
 
 <body>
-    <a href="index.html">↩ Home</a>
-    <h1 class="titulo-pagina">Desconto Clientes</h1>
+
+    <a href="../index.html">↩ Home</a>
+    <h1>Desconto Clientes</h1>
+
     <h2>Digite o Desconto:</h2>
+    
 
     <form action="" id="tipodesconto">
+
+    <div class="elementos-em-linha"></div>
+
+        <div class="controle-form">
         <label for="valor">cliente</label>
         <input type="number" id="valor">
+        </div>
 
-        <label for="porcentagem"> Porcentagem de:</label>
+        <div class="controle-form"></div>
+        <label for="porcentagem">Porcentagem de:</label>
 
         <select name="" id="porcentagem">
             <option value="Comum">Cliente Comum</option>
@@ -24,8 +53,13 @@
             <option value="VIP">Cliente VIP</option>
         </select>
 
-        <button type="button" id="btDesconto">Calcular</button>
-        <button type="reset" id="limparDesconto">Limpar</button>
+
+        <div id="botoes">
+            <button type="button" id="btDesconto" 
+            class="acao-positiva">Calcular</button>
+            <button type="reset" id="limparDesconto" 
+            class="acao-negativa">Limpar</button>
+        </div>
     </form>
 
     <div id="valorDesconto"></div>

@@ -1,11 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posto de Gasolina</title>
 </head>
 <body>
+    <a href="../index.html">↩ Home</a>
+    <br>
+    <h1 class="titulo-pagina">Posto de Gasolina/h1>
+        <form action="" id="posto">
+            <label for="litros">Insira a quantidade de litros:</label>
+            <input type="number" id="litros">
+            <label for="combustivel" id="combustivel">Escolha o combustível desejado:</label>
+            <select id="tipoCombustivel">
+                <option value="G" selected>Gasolina</option>
+                <option value="A" selected>Álcool</option>
+            </select>
     
+            <button type="button" id="btCombustivel">Calcular</button>
+            <button type="reset" id="btReset">Limpar</button>
+        </form>
+        <div id="resultado"></div>
+    <main>
+        <table>
+            <tr>
+                <th>
+                Combustível                
+                </th>
+                <th>
+                Valor
+                </th> 
+            <tr>
+                <td>Álcool </td>
+                <td>R$ 2,89</td>
+            </tr>
+        </table>
+        <nav>
+            <ul>
+                <li> Até 20 litros, desconto de 3% por litro </li>
+                <li> Acima de 20 litros, desconto de 5% por litro</li>
+            </ul></nav>
+            <br>
+            <br>
+            <table>
+                    <tr>
+                        <th>
+                        Combustível                
+                        </th>
+                        <th>
+                        Valor
+                        </th> 
+            <tr>
+                <td>Gasolina</td>
+                <td>R$ 5,19</td>
+            </tr> 
+        </table>
+                <nav>
+                    <ul>
+                        <li> Até 20 litros, desconto de 4% por litro </li>
+                        <li> Acima de 20 litros, desconto de 6% por litro</li>
+                    </ul>
+                </nav>     
+    </main>
+    <script>
+        document.getElementById('btCombustivel').addEventListener('click', function () {
+            litros = parseFloat(document.getElementById('litros').value);
+            tipoCombustivel = document.getElementById('tipoCombustivel').value;
+
+            const valorFinal = descontoCombustivel(tipoCombustivel, litros);
+
+            document.getElementById('resultado').innerHTML = valorFinal;
+        });
+
+        document.querySelector('#btReset').addEventListener('click', function () {
+            document.querySelector('#resultado').innerHTML = "";
+        });
+
+        function descontoCombustivel(tipoCombustivel, litros) {
+        }
+    </script>
+
 </body>
 </html>
