@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    background-color: beige;
+    background-color: rgb(247, 247, 129);
+    
 }
 
 .titulo-pagina {
@@ -40,6 +41,11 @@ main {
     display: flex;
     gap: 1rem;
 }
+
+a{
+    margin-left: 30px;
+}
+
 
 input {
     width: 100%;
@@ -91,14 +97,31 @@ button:active {
 }
 
 .acao-negativa {
-    background-color: #17f7e4;
+    background-color: #f71717;
     color: #ffffff;
 }
 
 .acao-negativa:hover {
-    background-color: #17f7e4;
+    background-color: #f71717;
 }
 
 .acao-negativa:active {
-    background-color:  #17f7e4;
+    background-color: #f71717;
+}
+
+.tabela,th,td{
+    border-collapse: collapse; /*define a separação entre as bordar*/
+    padding: 10px;
+    text-align: left;
+    margin: 40px;
+}
+
+th{
+    border: 2px solid #000000;
+    background-color:#fafaf7;
+    text-align: center;
+    
+}
+td{
+    border: 2px solid #000000;
 }
