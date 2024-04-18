@@ -46,6 +46,22 @@ a{
     margin-left: 30px;
 }
 
+.tabela,th,td{
+    border-collapse: collapse; /*define a separação entre as bordar*/
+    padding: 10px;
+    text-align: left;
+    margin: 40px;
+}
+
+th{
+    border: 2px solid #000000;
+    background-color:#fafaf7;
+    text-align: center;
+    
+}
+td{
+    border: 2px solid #000000;
+}
 
 input {
     width: 100%;
@@ -107,21 +123,4 @@ button:active {
 
 .acao-negativa:active {
     background-color: #f71717;
-}
-
-.tabela,th,td{
-    border-collapse: collapse; /*define a separação entre as bordar*/
-    padding: 10px;
-    text-align: left;
-    margin: 40px;
-}
-
-th{
-    border: 2px solid #000000;
-    background-color:#fafaf7;
-    text-align: center;
-    
-}
-td{
-    border: 2px solid #000000;
 }

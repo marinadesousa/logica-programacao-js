@@ -1,92 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posto de Gasolina</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-
     <a href="../index.html">↩ Home</a>
     <h1 class="titulo-pagina">Posto de Gasolina</h1>
 
-    <main>
-        <form action="" id="posto">
-            <label for="litros">Insira a quantidade de litros:</label>
-            <input type="number" id="litros">
-            <label for="combustivel" id="combustivel">Escolha o combustível desejado:</label>
-            <select id="tipoCombustivel">
-                <option value="G" selected>Gasolina</option>
-                <option value="A" selected>Álcool</option>
-            </select>
-    
-            <button type="button" id="btCombustivel">Calcular</button>
-            <button type="reset" id="btReset">Limpar</button>
-        </form>
-        <p id="resultado"></p>
+      <!-- <section> -->
 
         <table>
+            <h1>Tabela de Descontos</h1>
             <tr>
-                <th>
-                Combustível                
-                </th>
-                <th>
-                Valor
-                </th> 
-            <tr>
-                <td>Álcool </td>
-                <td>R$ 2,89</td>
+                <th>Combustível</th>
+                <th>Quantidade (litros)</th>
+                <th>Desconto</th>
             </tr>
-        </table>
+            <tr>
+                <td>Álcool</td>
+                <td>Até 20 litros</td>
+                <td>3% por litro</td>
+            </tr>
+    
+            <tr>
+                <td>Acima de 20 litros</td>
+                <td>5% por litro</td>
+            </tr>
 
-        <nav>
-            <ul>
-                <li> Até 20 litros, desconto de 3% por litro </li>
-                <li> Acima de 20 litros, desconto de 5% por litro</li>
-            </ul></nav>
-            <br>
-            <br>
-            <table>
-                    <tr>
-                        <th>
-                        Combustível                
-                        </th>
-                        <th>
-                        Valor
-                        </th> 
             <tr>
                 <td>Gasolina</td>
-                <td>R$ 5,19</td>
-            </tr> 
+                <td>Até 20 litros</td>
+                <td>4% por litro</td>
+            </tr>
+    
+            <tr>
+                <td>Acima de 20 litros</td>
+                <td>6% por litro</td>
+            </tr>
+    
         </table>
-                <nav>
-                    <ul>
-                        <li> Até 20 litros, desconto de 4% por litro </li>
-                        <li> Acima de 20 litros, desconto de 6% por litro</li>
-                    </ul>
-                </nav>
-            </main>
+    
+        <!-- </section> -->
+    <section>
 
-    <script>
-        document.getElementById('btCombustivel').addEventListener('click', function () {
-            litros = parseFloat(document.getElementById('litros').value);
-            tipoCombustivel = document.getElementById('tipoCombustivel').value;
-
-            const valorFinal = descontoCombustivel(tipoCombustivel, litros);
-
-            document.getElementById('resultado').innerHTML = valorFinal;
-        });
-
-        document.querySelector('#btReset').addEventListener('click', function () {
-            document.querySelector('#resultado').innerHTML = "";
-        });
-
-        function descontoCombustivel(tipoCombustivel, litros) {
-        }
-    </script>
+        <h2>Calculador De Combustível</h2>
+    
+            <div class="elementos-em-linha">
+    
+                <label for="litros">Litros De Combustível:</label>
+                <input type="number" id="litros" name="litros" min="1">
+    
+                <label for="combustivel">Tipo De Combustível</label>
+                <select name="combustivel" id="combustivel">
+                    <option value="A">Álcool</option>
+                    <option value="G">Gasolina</option>
+    
+                </select>
+    
+            </div>
+    
+            <div id="resultado"></div>
+    
+            <div id="botoes">
+                <button type="button" onclick="calculacomb()" id="calccomb">Calcular</button>
+                <button type="reset" id="limparesultado">Limpar</button>
+    
+            </div>
+    
+    </section>
+    
 
 </body>
 </html>
