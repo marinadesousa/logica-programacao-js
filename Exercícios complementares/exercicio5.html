@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +9,81 @@
 </head>
 <body>
 
-    <a href="../index.html">↩ Home</a>
+    <a href="/index.html">↩ Home</a>
     <h1 class="titulo-pagina">Posto de Gasolina</h1>
 
-    <form action="">
-        <label for="gasolina">Quantos litros de gasolina:</label>
-        <input type="text" id="gasolina">
+    <h1> <strong> Posto de gasolina </strong> </h1>
 
-        <br>
+    <table>
+        <tr>
+            <th> Álcool <strong> Até: R$ 2,89</strong></th>
+            <th> Gasolina <strong> Até: R$ 5,19</strong> </th>
+            </th>
+        </tr>
+        </thead>
 
-        <label for="alcool">Quantidade de litros de alcool:</label>
-        <input type="text" id="alcool">
-        
-        <div id="botoes">
-            <button type="button" id="Calcular" 
-            class="acao-positiva">calcularGasolina</button>
-            <button type="reset" id="btlimpar" 
-            class="acao-negativa">Limpar</button>
-        </div>
-  
-        <p id="resultado"></p>
+        <tr>
+            <td>Até 20 litros, 3% de desconto por litro</td>
+            <td>Até 20 litros, 4% de desconto por litro</td>
+        </tr>
 
-    </form>
+        <tr>
+            <td>Até 20 litros, 3% de desconto por litro</td>
+            <td>Até 20 litros, 4% de desconto por litro</td>
+        </tr>
 
-    <script src="exercicio4.js"></script>
+        <tr>
+            <td>Mais de 20 litros, 5% de desconto por litro</td>
+            <td>Mais de 20 litros, 6% de desconto por litro</td>
+        </tr>
+    </table>
+
+    <section>
+        <form action="" id="pagar">
+            <div id="btInserir">
+
+                <label for="litros">Quantidade de litros:</label>
+                <input type="number" min="1" id="litros">
+
+                <br>
+                <br>
+
+                <label for="tpCombustivel">Tipo de Combustivel:</label>
+                <select name="" id="tpCombustivel">
+                    <option value="semTexto"></option>
+                    <option value="Álcool">Álcool</option>
+                    <option value="Gasolina">Gasolina</option>
+                </select>
+            </div>
+            <br>
+
+            <div id="botoes">
+                <button type="button" id="btCalcula" class="acao-positiva">Calcular</button>
+                <button type="reset" id="btLimpa" class="acao-negativa">Limpar</button>
+            </div>
+
+        </form>
+
+        <p id="valorGasolina"></p>
+
+    </section>
+
+    <script src="exercicio5.js"></script>
+
+    <script>
+        document.querySelector('#btCalcula').addEventListener('click', function () {
+            const cliente = parseFloat(document.querySelector('#litros').value);
+            const valor = document.querySelector('#tpCombustivel').value;
+            const desconto = calculadesconto(cliente, valor);
+            document.querySelector('#valorGasolina').innerHTML = desconto;
+        });
+
+        document.querySelector('#btLimpa').addEventListener('click', function() {
+            document.querySelector('#valorGasolina').innerHTML = '';
+
+        })
+
+    </script>
 
 </body>
 </html>

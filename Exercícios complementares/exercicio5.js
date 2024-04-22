@@ -20,7 +20,7 @@ function Desconto(gasolina, alcool){
            mensagem = gasolina -( gasolina *( 6/ 100))
 
      }
-return mensagem
+      return mensagem
 
     }
     
