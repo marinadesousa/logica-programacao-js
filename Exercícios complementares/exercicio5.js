@@ -1,7 +1,7 @@
 function Desconto(gasolina, alcool){
     alcool 
 
-    let mensagem
+    let mensagemErro
 
      if(alcool > 20){
 
@@ -20,7 +20,7 @@ function Desconto(gasolina, alcool){
            mensagem = gasolina -( gasolina *( 6/ 100))
 
      }
-      return mensagem
+      return mensagemErro
 
     }
     

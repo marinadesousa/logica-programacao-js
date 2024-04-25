@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    background-color: #f36e6e;
+    background-color: #efcdcd;
     
 }
 
@@ -44,23 +44,6 @@ main {
 
 a{
     margin-left: 30px;
-}
-
-.tabela,th,td{
-    border-collapse: collapse; /*define a separação entre as bordar*/
-    padding: 10px;
-    text-align: left;
-    margin: 40px;
-}
-
-th{
-    border: 2px solid #000000;
-    background-color:#fafaf7;
-    text-align: center;
-    
-}
-td{
-    border: 2px solid #000000;
 }
 
 input {
