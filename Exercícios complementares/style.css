@@ -65,6 +65,7 @@ input {
     flex-direction: row; /* estabelece a direção de alinhamento */
     justify-content: center; /* alinha no eixo principal */
     align-items: center; /* alinha no eixo secundário */
+   gap: 1rem;
 }
 
 button {
@@ -107,4 +108,3 @@ button:active {
 .acao-negativa:active {
     background-color: #f71717;
 }
-

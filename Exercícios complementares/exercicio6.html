@@ -8,6 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1 class="titulo-pagina">Produtos com desconto</h1>
+
+    <main>
+
+        <form action=".">
+           
+            <div class="controle-form">
+                <label for="codigoProduto">Código do produto:</label>
+                <input type="text"id="codigoProduto" required>
+            </div>
+
+            <div class="controle-form">
+                <label for="qtdeProduto">Quantidade:</label>
+                <input type="text" id="qtdeProduto" required autofocus>
+            </div>
+
+            <div class="botoes">
+                <button type="button" class="acao-positiva" id="btCalcular">Calcular</button>
+                <button type="reset" class="acao-negativa" id="btlimpar">Limpar</button>
+            </div>
+
+        </form>
+
+        <div id="resultado"></div>
+
+    </main>
     
+    <script src="exercicio6.js"></script>
+
 </body>
 </html>
