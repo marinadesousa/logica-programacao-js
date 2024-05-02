@@ -90,3 +90,6 @@ const produtos = [
             valorFinal: valorFinal,
         }
 }
+
+// TODO Obter os dados de produto a partir de um ARQUIVO JSON
+// TODO Refatorar a função calculaDesconto()

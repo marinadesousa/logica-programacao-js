@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    background-color: #efcdcd;
+    background-color: #de9898;
     
 }
 
@@ -107,4 +107,8 @@ button:active {
 
 .acao-negativa:active {
     background-color: #f71717;
+}
+
+.monetario::before {
+    content: "R$ ";
 }
