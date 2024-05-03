@@ -2,7 +2,7 @@
 
 
 span {
-    color: #25e7d7;
+    color: #deeceb;
     font-family: "Ubuntu",sans-serif;
     font-size: 2rem;
     font-weight: 700;
@@ -13,7 +13,7 @@ span {
 
 .menu-navegacao {
     height: 65px;
-    background-color: #d676f3;
+    background-color: #301c5b;
     display: flex;
     justify-content: space-between;
     align-items: center;
