@@ -1,0 +1,40 @@
+/*
+    Estilos para outros tamanhos de telas:
+    Mobile -> até 400px
+    Tablet -> até 768px
+    TVs -> Maior que 1920px
+*/
+
+/* Mobile */
+@media screen and (max-width: 400px) {
+    .titulo-pagina
+    {
+        width: 400px;
+        margin: 2rem auto;
+        text-align: center;
+        font-size: 2.2rem;
+    }
+
+    main {
+        width: 80%;
+        border: 1px solid black; 
+        margin: auto;
+        padding: 2rem;
+    }
+
+    .elementos-em-linha,
+    .botoes {
+        flex-direction: column;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width:768px) {
+
+}
+
+/* Tvs */
+@media screen and (min-width:1921px) {
+
+
+}
